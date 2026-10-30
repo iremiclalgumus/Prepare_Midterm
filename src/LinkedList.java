@@ -1,11 +1,6 @@
 public class LinkedList {
     Node head; //ilk node, head her metodun ulaşması için main in dışında yazılır.
 
-    //Eğer head boşsa true,değilse false döner. Listenin varlığını kontrol eder.
-    //return
-    public boolean isEmpty() {
-        return head == null;
-    }
 
 
     public static void main(String[]args){
@@ -37,5 +32,43 @@ public class LinkedList {
         //Listede elemanlar olduğu için false dönecek
         System.out.println("Now Is the List Empty? " + myList.isEmpty());
 
+        //PrintList metodunu çağırdık
+        printList(myList);
     }
+
+    ////METOTLAR;
+
+    //Eğer head boşsa true,değilse false döner. Listenin varlığını kontrol eder.
+    //return cevabı geldiği yere döndürür
+    //Main in dışına classın içine yazılır
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+
+    //Listeyi yazdırmak için kullanılan metot
+    //Main in dışına class ın içine yazılır
+
+    public static void printList(LinkedList list)
+    {
+        // 1. Adım: Elimize bir el feneri alalım ve aramaya trenden başlayalım
+        Node currNode = list.head;
+
+        System.out.print("LinkedList: ");
+
+        // 2. Adım: Vagonlar bitene kadar (null olana kadar) döngüye gir
+        while (currNode != null) {
+            // Şu an üzerinde olduğumuz vagonun içindeki veriyi yazdır
+            System.out.print(currNode.data + " ");
+
+            // Bir sonraki vagona geçiş yap (oku takip et!)
+            currNode = currNode.next;
+        }
+    }
+
+
+
+
+
+
 }
