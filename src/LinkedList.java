@@ -32,13 +32,15 @@ public class LinkedList {
         //Listede elemanlar olduğu için false dönecek
         System.out.println("Now Is the List Empty? " + myList.isEmpty());
 
+        //Search metodunu çağırdık
+        //2 parametreli olduğu için parantez içi :(myList.head, 20)
+        System.out.println("We have 20 in list? " + myList.search(myList.head, 20));
+
         //PrintList metodunu çağırdık
         //metottaki list myList e dönüştü
         printList(myList);
 
-        //Search metodunu çağırdık
-        //2 parametreli olduğu için parantez içi :(myList.head, 20)
-        System.out.println("We have 20 in list? " + myList.search(myList.head, 20));
+
     }
 
     ////METOTLAR;
